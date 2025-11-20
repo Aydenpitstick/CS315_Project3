@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=4 uid="uid://cp71ofa5jw5oo"]
+
+[ext_resource type="SpriteFrames" uid="uid://caa7o1shic62i" path="res://Assets/SpriteFrames/player.tres" id="1_lvfns"]
+[ext_resource type="Script" uid="uid://cryuhgsqj42s2" path="res://Scenes/character_body_2d.gd" id="1_sojq8"]
+[ext_resource type="TileSet" uid="uid://2vuw2pd7khbh" path="res://Assets/Elements/World.tres" id="3_hi7j2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sojq8"]
+radius = 28.0
+height = 84.0
+
+[node name="LevelOne" type="Node2D"]
+
+[node name="Wizard" type="CharacterBody2D" parent="."]
+position = Vector2(64, 161)
+script = ExtResource("1_sojq8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wizard"]
+sprite_frames = ExtResource("1_lvfns")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wizard"]
+position = Vector2(-8, 28)
+shape = SubResource("CapsuleShape2D_sojq8")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAUAAgACAAUAAAABAAUAAgACAAUAAAACAAUAAgACAAUAAAADAAUAAgACAAUAAAAEAAUAAgACAAUAAAAFAAUAAgACAAUAAAAGAAUAAgACAAUAAAAHAAUAAgACAAUAAAAIAAUAAgACAAUAAAAJAAUAAgACAAUAAAAKAAUAAgACAAUAAAALAAUAAgACAAUAAAAMAAUAAgACAAUAAAANAAUAAgACAAUAAAAOAAUAAgACAAUAAAA=")
+tile_set = ExtResource("3_hi7j2")
