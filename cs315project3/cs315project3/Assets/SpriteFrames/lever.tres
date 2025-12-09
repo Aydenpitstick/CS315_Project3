@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://bajl523mvvyha"]
+
+[ext_resource type="Texture2D" uid="uid://ep41rx2hfhkq" path="res://Assets/Sprites/Medieval_props_free.png" id="1_ydd1x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydd1x"]
+atlas = ExtResource("1_ydd1x")
+region = Rect2(70, 85, 52, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjiro"]
+atlas = ExtResource("1_ydd1x")
+region = Rect2(18, 85, 52, 85)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydd1x")
+}],
+"loop": true,
+"name": &"After",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjiro")
+}],
+"loop": true,
+"name": &"Before",
+"speed": 5.0
+}]
